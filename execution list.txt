@@ -1,0 +1,276 @@
+# Kraken Companion - Prototype Execution Task List
+
+## Project Overview
+**Delivery:** Single-page web experience  
+**Access Method:** QR code → Vercel-hosted site  
+**Goal:** Demonstrate auto-playing animation explaining icing rule
+
+---
+
+## PHASE 1: COMPLETE
+
+
+## PHASE 2: DESIGN
+
+### UX Design
+- [ ] **Define user flow** (scan QR → page loads → animation autoplays)
+- [ ] **Determine page layout** (full-screen video or contained player)
+- [ ] **Plan mobile-first responsive design** (portrait orientation priority)
+- [ ] **Decide on controls** (autoplay only, or include replay button?)
+- [ ] **Plan loading state** (spinner or placeholder while animation loads)
+
+### UI Design
+- [ ] **Design single-page layout** 
+- [ ] **Apply Kraken brand colors** (Deep Sea Blue #001628 background)
+- [ ] **Add Kraken logo placement** (top or bottom of page)
+- [ ] **Design loading state** (branded spinner or animation)
+- [ ] **Create replay button** (if needed - Ice Blue #99D9D9 accent)
+- [ ] **Ensure high contrast** for arena viewing conditions
+- [ ] **Design for multiple screen sizes** (iPhone SE to iPhone 14 Pro Max)
+
+---
+
+## PHASE 3: ANIMATION PRODUCTION
+
+### Pre-Production
+- [ ] **Write detailed script for icing animation** (with timestamps)
+- [ ] **Storyboard the animation** (frame-by-frame visual plan)
+- [ ] **Get script approval** from hockey expert/consultant
+- [ ] **Choose animation tool** (After Effects, Premiere, Lottie, CSS/JS, etc.)
+- [ ] **Decide on format** (MP4 video vs. Lottie/SVG animation vs. CSS animation)
+
+### Production
+- [ ] **Create hockey rink template** (bird's-eye view, accurate proportions)
+- [ ] **Design player/puck assets** (simple circles or stick figures in Kraken colors)
+- [ ] **Animate icing sequence** (10 seconds max)
+  - Player shoots puck from defensive zone
+  - Puck crosses red line and goal line untouched
+  - Whistle blows
+- [ ] **Add text overlays** (clear, concise explanation)
+  - "Icing occurs when..."
+  - "The puck crosses both lines without being touched"
+  - "Play stops and face-off returns to defensive zone"
+- [ ] **Add pause points** (2-3 moments for emphasis)
+- [ ] **Apply Kraken brand colors** to all elements
+
+### Post-Production
+- [ ] **Review animation with team** for accuracy and clarity
+- [ ] **Get hockey expert approval** on rule explanation
+- [ ] **Optimize for web delivery** (compress file size, maintain quality)
+- [ ] **Export in chosen format** (MP4, WebM, Lottie JSON, etc.)
+- [ ] **Test animation playback** on multiple mobile devices
+- [ ] **Create fallback formats** (WebM + MP4 for browser compatibility)
+
+---
+
+## PHASE 4: DEVELOPMENT
+
+### Setup
+- [ ] **Initialize project** (Next.js, vanilla HTML/CSS/JS, or React)
+- [ ] **Set up project structure** (folders for assets, styles, components)
+- [ ] **Install dependencies** (if using framework)
+- [ ] **Configure for Vercel deployment** (vercel.json if needed)
+
+### Page Development
+- [ ] **Build HTML structure** (semantic markup)
+- [ ] **Implement CSS styling** (Kraken brand colors, responsive layout)
+- [ ] **Add Kraken logo** to page
+- [ ] **Integrate animation/video** (embed player or animation container)
+- [ ] **Implement autoplay functionality** (with mobile considerations)
+- [ ] **Add loading state** (spinner while animation loads)
+- [ ] **Add replay button** (optional - allows user to watch again)
+- [ ] **Ensure mobile-first responsive design** (test on various screen sizes)
+
+### Technical Optimization
+- [ ] **Optimize animation file size** (lazy loading, compression)
+- [ ] **Implement video preloading** (for smooth autoplay)
+- [ ] **Add meta tags** (title, description, Open Graph for sharing)
+- [ ] **Configure mobile viewport** (prevent zooming, proper scaling)
+- [ ] **Test autoplay on iOS Safari** (autoplay restrictions)
+- [ ] **Test autoplay on Android Chrome** (autoplay restrictions)
+- [ ] **Add muted attribute** (required for autoplay on most browsers)
+- [ ] **Implement unmute button** (if audio is added later)
+
+### Accessibility & Performance
+- [ ] **Add alt text** for images (Kraken logo)
+- [ ] **Ensure keyboard navigation** (if interactive elements exist)
+- [ ] **Test page load speed** (aim for <2 seconds on 4G)
+- [ ] **Optimize for low-light viewing** (high contrast, dark mode)
+- [ ] **Test with reduced motion preferences** (respect user settings)
+
+---
+
+## PHASE 5: DEPLOYMENT & QR CODE
+
+### Deployment
+- [ ] **Push code to Git repository** (GitHub, GitLab, etc.)
+- [ ] **Deploy to Vercel** (automatic deployment from Git)
+- [ ] **Test deployed site** on Vercel URL
+- [ ] **Configure custom domain** (optional - e.g., kraken-learn.vercel.app)
+- [ ] **Test on multiple mobile devices** (iOS Safari, Android Chrome)
+- [ ] **Test on multiple browsers** (Safari, Chrome, Firefox, Edge)
+- [ ] **Verify HTTPS is enabled** (Vercel default)
+
+### QR Code Generation
+- [ ] **Generate QR code** pointing to Vercel URL
+- [ ] **Test QR code scanning** on multiple devices
+- [ ] **Create high-resolution QR code** (for printing)
+- [ ] **Design branded QR code** (optional - add Kraken colors/logo)
+- [ ] **Create multiple sizes** (poster, table tent, digital display)
+- [ ] **Add call-to-action text** ("Scan to learn about icing")
+
+### QR Code Deployment Materials
+- [ ] **Create poster design** with QR code (for arena placement)
+- [ ] **Create table tent design** (for concourse tables)
+- [ ] **Create digital display slide** (for jumbotron or LED boards)
+- [ ] **Provide print-ready files** (PDF, high-res PNG)
+- [ ] **Document QR code URL** (for future updates)
+
+---
+
+## PHASE 6: TESTING & REFINEMENT
+
+### Technical Testing
+- [ ] **Test page load on 3G/4G/5G** connections
+- [ ] **Test autoplay functionality** on iOS (Safari)
+- [ ] **Test autoplay functionality** on Android (Chrome)
+- [ ] **Test on various screen sizes** (iPhone SE, iPhone 14, Android tablets)
+- [ ] **Test in low-light conditions** (simulate arena environment)
+- [ ] **Test QR code scanning** from various distances
+- [ ] **Verify animation plays smoothly** (no stuttering or lag)
+- [ ] **Check for any console errors** (browser developer tools)
+
+### User Testing
+- [ ] **Recruit 2-3 test users** (first-time hockey fans)
+- [ ] **Provide QR code to test users** (simulate real experience)
+- [ ] **Observe scanning and viewing process** (note any friction)
+- [ ] **Ask comprehension questions** ("What is icing?")
+- [ ] **Collect qualitative feedback** (clear? helpful? too long?)
+- [ ] **Note any confusion points** or technical issues
+- [ ] **Calculate comprehension rate** (did they understand the rule?)
+
+### Refinement
+- [ ] **Review testing findings** with team
+- [ ] **Prioritize improvements** (critical vs. nice-to-have)
+- [ ] **Make animation adjustments** (if clarity issues found)
+- [ ] **Make UI/UX adjustments** (if usability issues found)
+- [ ] **Fix any bugs** discovered during testing
+- [ ] **Re-deploy to Vercel** (automatic from Git push)
+- [ ] **Re-test critical issues** to verify fixes
+
+---
+
+## PHASE 7: DELIVERY & DOCUMENTATION
+
+### Documentation
+- [ ] **Create user guide** (how to scan and use)
+- [ ] **Document technical setup** (for future updates)
+- [ ] **Write testing summary report** (findings and recommendations)
+- [ ] **Create maintenance guide** (how to update animation or content)
+- [ ] **Document QR code locations** (where they'll be placed in arena)
+- [ ] **Create "Future Enhancements" document** (additional rules, features)
+
+### Stakeholder Presentation
+- [ ] **Prepare demo** (scan QR code live or show screen recording)
+- [ ] **Create presentation slides** (context, goals, process, results)
+- [ ] **Share user testing results** and feedback
+- [ ] **Demonstrate on mobile device** (live walkthrough)
+- [ ] **Discuss deployment plan** (where QR codes will be placed)
+- [ ] **Present next steps** (additional rules, analytics, etc.)
+- [ ] **Collect stakeholder feedback** on prototype
+- [ ] **Obtain sign-off** on deliverable
+
+### Handoff
+- [ ] **Share Vercel project access** with stakeholders
+- [ ] **Share Git repository access** (for future updates)
+- [ ] **Provide all design files** (Figma, Sketch, Adobe XD)
+- [ ] **Provide animation source files** (After Effects, etc.)
+- [ ] **Share QR code files** (all sizes and formats)
+- [ ] **Share print-ready materials** (posters, table tents)
+- [ ] **Conduct handoff meeting** (walk through how to update content)
+- [ ] **Provide contact info** for post-launch support (if applicable)
+
+---
+
+## ONGOING TASKS (Throughout Project)
+
+### Communication
+- [ ] **Regular team check-ins** (frequency TBD - daily/weekly)
+- [ ] **Stakeholder updates** (at each phase completion)
+- [ ] **Quick Slack/email updates** for blockers or questions
+
+### Project Management
+- [ ] **Update task list** regularly (mark completed items)
+- [ ] **Track time spent** on each phase (for future estimation)
+- [ ] **Monitor risks** and communicate early if delays occur
+- [ ] **Keep shared folder organized** (clear file naming, version control)
+
+### Quality Assurance
+- [ ] **Review animation** for brand compliance
+- [ ] **Review code** for best practices
+- [ ] **Test on real devices** after each major change
+- [ ] **Check page performance** regularly (Lighthouse scores)
+
+---
+
+## DEPENDENCIES & CRITICAL PATH
+
+### Critical Path Items
+1. ✅ **PRD Approval** (Phase 1) → Blocks all other work
+2. ✅ **Design Approval** (Phase 2) → Blocks development and animation
+3. ✅ **Animation Completion** (Phase 3) → Blocks full page testing
+4. ✅ **Deployment** (Phase 5) → Blocks QR code generation
+5. ✅ **QR Code Generation** (Phase 5) → Blocks user testing
+
+### Key Dependencies
+- **Brand assets** must be obtained before design begins
+- **Animation script** must be approved before production starts
+- **Design** must be finalized before development begins
+- **Animation** must be complete before deployment testing
+- **Vercel deployment** must work before QR codes are generated
+
+---
+
+## RESOURCE ALLOCATION
+
+### Roles & Responsibilities
+
+| Role | Primary Responsibilities | Phases Active |
+|------|-------------------------|---------------|
+| **Product Owner** | PRD, stakeholder management, approvals | 1-7 |
+| **UX/UI Designer** | Page design, QR code materials | 2, 5 |
+| **Animator** | Icing animation production | 3 |
+| **Web Developer** | Page development, Vercel deployment | 4-5 |
+| **QA Tester** | Testing, bug documentation | 6 |
+| **Hockey Consultant** | Rule accuracy review | 3 |
+
+---
+
+## SUCCESS METRICS
+
+### Track Throughout Project
+- [ ] **Animation duration** (Target: ≤10 seconds)
+- [ ] **Page load time** (Target: <2 seconds on 4G)
+- [ ] **User comprehension rate** (Target: >80% understand icing after viewing)
+- [ ] **QR code scan success rate** (Target: 100% on first attempt)
+- [ ] **Mobile device compatibility** (Target: works on iOS and Android)
+
+---
+
+## FINAL DELIVERABLES CHECKLIST
+
+- [ ] ✅ Live Vercel-hosted webpage (with icing animation)
+- [ ] ✅ QR code (multiple formats and sizes)
+- [ ] ✅ Print-ready materials (posters, table tents)
+- [ ] ✅ Source code repository (GitHub with documentation)
+- [ ] ✅ Animation source files (After Effects or equivalent)
+- [ ] ✅ Design files (Figma/Sketch with page layout)
+- [ ] ✅ User testing report (findings and recommendations)
+- [ ] ✅ Maintenance documentation (how to update content)
+- [ ] ✅ Presentation deck (demo and results)
+
+---
+
+**Project Start Date:** [Insert Date]  
+**Estimated Duration:** 4-6 weeks (depending on team availability)  
+**Last Updated:** March 11, 2026
