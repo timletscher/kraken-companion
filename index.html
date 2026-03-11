@@ -55,5 +55,96 @@
         </div>
       </section>
     </main>
+
+    <div class="modal" id="feedback-modal" role="dialog" aria-modal="true">
+      <div class="modal-card" role="document">
+        <button class="modal-close" type="button" aria-label="Close">X</button>
+        <div class="modal-content" id="feedback-content">
+          <p class="modal-title">Was this helpful?</p>
+          <div class="modal-actions">
+            <button class="modal-button" type="button" data-action="replay">
+              REPLAY
+            </button>
+            <button class="modal-button" type="button" data-action="helpful">
+              HELPFUL
+            </button>
+            <button class="modal-button" type="button" data-action="unhelpful">
+              UNHELPFUL
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const video = document.querySelector('.video-player');
+      const modal = document.getElementById('feedback-modal');
+      const modalContent = document.getElementById('feedback-content');
+      const modalClose = document.querySelector('.modal-close');
+
+      let modalShown = false;
+
+      const showModal = () => {
+        modal.classList.add('is-visible');
+      };
+
+      const hideModal = () => {
+        modal.classList.remove('is-visible');
+      };
+
+      const resetModal = () => {
+        modalContent.innerHTML = `
+          <p class="modal-title">Was this helpful?</p>
+          <div class="modal-actions">
+            <button class="modal-button" type="button" data-action="replay">
+              REPLAY
+            </button>
+            <button class="modal-button" type="button" data-action="helpful">
+              HELPFUL
+            </button>
+            <button class="modal-button" type="button" data-action="unhelpful">
+              UNHELPFUL
+            </button>
+          </div>
+        `;
+      };
+
+      const setThankYou = () => {
+        modalContent.innerHTML = `
+          <p class="modal-title">Thank you for the feedback.</p>
+          <p class="modal-message">Now back to the game. Go Kraken!</p>
+        `;
+      };
+
+      video.addEventListener('timeupdate', () => {
+        if (!modalShown && video.currentTime >= 8) {
+          modalShown = true;
+          showModal();
+        }
+      });
+
+      modal.addEventListener('click', (event) => {
+        const action = event.target?.dataset?.action;
+        if (!action) {
+          return;
+        }
+
+        if (action === 'replay') {
+          hideModal();
+          resetModal();
+          modalShown = false;
+          video.currentTime = 0;
+          video.play();
+          return;
+        }
+
+        setThankYou();
+      });
+
+      modalClose.addEventListener('click', () => {
+        hideModal();
+        resetModal();
+      });
+    </script>
   </body>
 </html>
